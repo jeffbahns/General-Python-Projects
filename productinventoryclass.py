@@ -1,5 +1,7 @@
 # Product Inventory Class
 
+# manages an inventory of products.
+# keeps track of various products and can sum up the inventory value.
 
 class Product(object):
 
@@ -10,14 +12,15 @@ class Product(object):
 
 
 class Inventory(object):
-
-    def __init__(self, products):
+    
+    def __init__(self, products):   # products arg must be taken as list []
         self.products = products
         self.value = 0
 
     def print_inv(self):
-        for product in self.products:
-            print (product.id)
+        for i in range(0, len(self.products)):
+            item = self.products[i]
+            print (str(i+1)+".", item.id, "$"+str(item.price), "x"+str(item.quantity))
 
     def add_to_inv(self, item):
         self.products.append(item)
@@ -26,15 +29,4 @@ class Inventory(object):
         sum_ = 0
         for product in self.products:
             sum_ += product.price * product.quantity
-        print ("$" + str(sum_))
-
-t = Product(245, "Craftsman Toolbox", 1)
-s = Product(35, "Screwdriver", 3)
-r = Product(103.78, "Rearbelt", 11)
-inv = Inventory([])
-inv.add_to_inv(t)
-inv.add_to_inv(s)
-inv.add_to_inv(r)
-inv.print_inv()
-inv.inv_sum()
-
+        print ("TOTAL INVENTORY VALUE\n", "[$"+str(sum_)+"]")
