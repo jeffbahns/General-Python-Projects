@@ -55,11 +55,16 @@ def tempconv(u_in, u_out, value):
     return str(value) + " " + u_in + " --> " + str(round(value_conv, 3)) + " " + u_out
 
 
-#def massconv(u_in, u_out, value):
-#    if u_in == 'kilograms' or 'kg' in u_in and u_out == 'pounds' or 'lb' in u_out:
-#        value_conv = value * 2.2046
-#
-#    elif u_in == 'pounds' or 'lb' in u_in and u_out == 'kilograms' or 'kg' in u_out:
-#        value_conv = value / 2.2046
-print (tempconv('f', 'k', 84.90))
+def massconv(u_in, u_out, value):
+
+    if u_in == 'kg' and u_out == 'lb':
+        value_conv = value * 2.2046
+
+    elif u_in == 'pounds' or 'lb' in u_in and u_out == 'kilograms' or 'kg' in u_out:
+        value_conv = value / 2.2046
+
+    return round(value_conv, 3)
+
+
+print (massconv('lb', 'kg', 12345))
 
