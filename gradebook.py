@@ -36,9 +36,31 @@ class GradeBook():
     def print_grades(self):
         for g in self.grade_list:
             print (g.mark, g.units, g.course, g.teacher)
-    
-                  
-comsc_122 = Grade('A', 3, 'COMSC-132', 'Giambattista')
+
+COURSES = [ comsc_122 = Grade('A', 3, 'COMSC-132', 'Giambattista'),
+            ra_015 = Grade('A', 3, 'RA-015', ''),
+            ra_012 = Grade('B', 3, 'RA-012', ''),
+            ra_010 = Grade('A', 3, 'RA-010', ''),
+            MUSIC_093 = Grade('A', 2, 'MUSIC-093', ''),
+            MUSIC_015 = Grade('A', 3, 'MUSIC-015', ''),
+            RA_025 = Grade('A', 3, 'RA-025', ''),
+            RA_021 = Grade('A', 2, 'RA-021', ''),
+            RA_020 = Grade('A', 3, 'RA-020', ''),
+            ENGL_100 = Grade('A', 3, 'ENGL-100', ''),
+            MATH_040 = Grade('A', 4, 'MATH-040', 'Hubbard'),
+            SPCH_110 = Grade('A', 3, 'SPCH-110', 'Petersen'),
+            PSYCH_014 = Grade('B', 3, 'PSYCH-014', ''),
+            MATH_050 = Grade('B', 4, 'MATH-050', 'Horne'),
+            COMSC_044 = Grade('A', 3, 'COMSC-044', 'Giambattista'),
+            BIOSC_010 = Grade('A', 4, 'BIOSC-010', ''),
+            PHYS_040 = Grade('C', 4, 'PHYS-040', 'Stone'),
+            PHIL_041 = Grade('A', 3, 'PHIL-041', ''),
+            MATH_060 = Grade('B', 4, 'MATH-060', ''),
+            DRAMA_015 = Grade('A', 3, 'DRAMA-015', 'Norris'),
+            MATH_070 = Grade('A', 4, 'MATH-070', 'Stricker'),
+            COMSC_142 = Grade('A', 3, 'COMSC-142', 'Giambattista'),
+            COMSC_122 = Grade('A', 3, 'COMSC-122', 'Giambattista')
+            ]
 
 gbook = GradeBook([])
 gbook.add(comsc_122)
