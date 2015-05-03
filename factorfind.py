@@ -1,3 +1,4 @@
+
 # Factor Finder
 
 def factorfind(num):
@@ -6,3 +7,5 @@ def factorfind(num):
 		if num % i == 0:
 			factors.append(i)
 	return factors
+print (factorfind(1529))
+print (factorfind(14039))
